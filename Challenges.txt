@@ -1,0 +1,2 @@
+1. Understanding demoQA's API.
+2. Installing WebdriverIO to my project.
