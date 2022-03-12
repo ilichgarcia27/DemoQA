@@ -1,2 +1,4 @@
 1. Understanding demoQA's API.
-2. Installing WebdriverIO to my project.
+2. Installing WebdriverIO and CucumberJS to my project.
+3. Getting the right selectors.
+4. Understanding WebdriverIO errors.

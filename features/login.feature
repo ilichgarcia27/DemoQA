@@ -1,6 +1,6 @@
 Feature: Demo QA Login
 
-  Scenario Outline: As a user, I can log in to the demo QA page
+  Scenario Outline: As an existing user with correct credentials, I can log in to the demo QA page
 
     Given I am on the login page
     When I login with <username> and <password>
@@ -21,3 +21,13 @@ Feature: Demo QA Login
       | username           | password     | message                       |
       | fakeUserName       | fakePassword | Invalid username or password! |
       | I-dont-exist       | neither-Do-I | Invalid username or password! |
+
+  Scenario Outline: As a non-specified user, I can't log in to the demo QA page
+
+    Given I am on the login page
+    When I login with <username> and <password>
+    Then I should see an invalid-form error
+
+    Examples:
+      | username           | password     |
+      |                    |              |
