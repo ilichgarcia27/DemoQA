@@ -11,7 +11,7 @@ Feature: Demo QA Profile
   #      | username           | password    | book         |
   #      | Anibal.Schmitt79   | Testing123! | ECMAScript 6 |
 
-   Scenario Outline: As a logged user with correct credentials, I can go to my Profile page and delete my books collection
+  Scenario Outline: As a logged user with correct credentials, I can go to my Profile page and delete my books collection
 
     Given I am on the login page
     When I login with <username> and <password>
@@ -22,7 +22,7 @@ Feature: Demo QA Profile
       | username           | password    |
       | Anibal.Schmitt79   | Testing123! |
 
-   Scenario Outline: As a logged user, I can go to my Profile page and logout from the app
+  Scenario Outline: As a logged user, I can go to my Profile page and logout from the app
 
     Given I am on the login page
     When I login with <username> and <password>
