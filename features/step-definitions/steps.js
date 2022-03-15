@@ -90,14 +90,3 @@ Then(/^I shouldn't be able to see any book on my books collection$/, async () =>
 Then(/^I should be able to see the following book: Understanding ECMAScript 6$/, async () => { // NO FUNCIONA .-.
     chaiExpect(await ProfilePage.understandingECMABook).to.exist;
 });
-
-Then(/^I should see the following list of books (.*), (.*), (.*), (.*), (.*)$/, async (book1, book2, book3, book4, book5) => { // NO FUNCIONA .-.
-    console.log("PUTO");
-    // chaiExpect(await BookStorePage.programmingJSBook).to.exist;
-    // chaiExpect(await BookStorePage.speakingJSBook).to.exist;
-    // chaiExpect(await BookStorePage.learningJSBook).to.exist;
-    // chaiExpect(await BookStorePage.designingEvolvableBook).to.exist;
-    // chaiExpect(await BookStorePage.understandingECMABook).to.exist;
-    //expect(await ProfilePage.programmingJSBook.getText()).to.be.equal(book1);
-    //await ProfilePage.logout.click();
-});
