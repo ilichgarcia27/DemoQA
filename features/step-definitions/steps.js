@@ -37,7 +37,6 @@ When(/^I search for the following book: (.*)$/, async (book) => {
 
 When(/^I add (.*) and (.*) to my collection$/, async (book1, book2) => {
     (await ProfilePage.bookStore).scrollIntoView();
-    (await ProfilePage.bookStore).scrollIntoView();
     await ProfilePage.bookStore.click();
     (await BookStorePage.programmingJSBook).scrollIntoView();
     await BookStorePage.programmingJSBook.click();
@@ -63,6 +62,13 @@ When(/^I delete my account from the app$/, async () => {
     await (await ProfilePage.deleteAccount).scrollIntoView();
     await (await ProfilePage.deleteAccount).click();
     await (await ProfilePage.confirmDelete).click();
+});
+
+When(/^I access (.*) book to see its information$/, async (book) => {
+    (await ProfilePage.bookStore).scrollIntoView();
+    await ProfilePage.bookStore.click();
+    (await BookStorePage.designingEvolvableBook).scrollIntoView();
+    await BookStorePage.designingEvolvableBook.click();
 });
 
 /************************* THENS *************************/
@@ -101,4 +107,10 @@ Then(/^I should see the following book: (.*)$/, async (book) => {
     chaiExpect(await BookStorePage.learningJSBook).to.exist;
     chaiExpect(await BookStorePage.learningJSBook.getText()).to.be.equal(book);
     await BookStorePage.logout.click();
+});
+
+Then(/^an information view should be displayed showing: (.*), (.*)$/, async (book, isbn) => {
+    chaiExpect(await BookStorePage.designingEvolvableTitle.getText()).to.be.equal(book);
+    chaiExpect(await BookStorePage.isbn.getText()).to.be.equal(isbn);
+    await BookStorePage.bookLogout.click();
 });

@@ -10,7 +10,6 @@ Feature: Demo QA Book Store
    Examples:
      | username           | password    | book1                               | book2                      |
      | Kiarra.Satterfield | Testing123! | Programming JavaScript Applications | Understanding ECMAScript 6 |
-      #| Sonia_Rath95       | Testing123! | Programming JavaScript Applications | Understanding ECMAScript 6 |
 
   Scenario Outline: As an existing user with correct credentials, I can look for books/authors in the book store
 
@@ -22,3 +21,14 @@ Feature: Demo QA Book Store
    Examples:
      | username           | password    | book                                |
      | Kiarra.Satterfield | Testing123! | Learning JavaScript Design Patterns |
+  
+  Scenario Outline: As an existing user with correct credentials, I can see information from any book
+
+   Given I am on the login page
+   When I login with <username> and <password>
+   And I access <book> book to see its information
+   Then an information view should be displayed showing: <book>, <isbn>
+
+   Examples:
+     | username     | password    | book                                      | isbn          |
+     | Sonia_Rath95 | Testing123! | Designing Evolvable Web APIs with ASP.NET | 9781449337711 |
