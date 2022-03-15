@@ -1,15 +1,15 @@
-# Demo QA Automation
+# Demo QA Automation 🚀
 
 This "Demo QA" is a WebdriverIO automation project based on CucumberJS and Chai, intended to run on Google Chrome, Mozilla Firefox and Safari.
 
-## Technologies
+## Technologies ⚙
 
 - WebdriverIO
 - CucumberJS
 - Chai
 - Selenium Standalone
 
-## Getting Started
+## Getting Started 🏁
 
 ### Prerequisites
 
@@ -47,7 +47,7 @@ npm install
 npm run wdio
 ```
 
-## Usage
+## Usage 🧪
 
 ```javascript
 Then('should return an error', () => {
@@ -57,10 +57,10 @@ Then('should return an error', () => {
 });
 ```
 
-## Contributing
+## Contributing ➕
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
+## License ⛏
 MIT License
 
 Copyright (c) [2021] [Ilich Andrés García]
