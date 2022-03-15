@@ -53,10 +53,16 @@ When(/^I add (.*) and (.*) to my collection$/, async (book1, book2) => {
     await ProfilePage.profile.click();
 });
 
-When(/^I place the following search inside the search box: ing$/, async () => {
+When(/^I place the following search inside the search box: learning$/, async () => {
     await (await ProfilePage.bookStore).scrollIntoView();
     await (await ProfilePage.bookStore).click();
-    await (await BookStorePage.searchBox).setValue("ing"); // No aparece .-.
+    await (await BookStorePage.searchBox).setValue("learning");
+});
+
+When(/^I delete my account from the app$/, async () => {
+    await (await ProfilePage.deleteAccount).scrollIntoView();
+    await (await ProfilePage.deleteAccount).click();
+    await (await ProfilePage.confirmDelete).click();
 });
 
 /************************* THENS *************************/
@@ -85,13 +91,14 @@ Then(/^I shouldn't be able to see any book on my books collection$/, async () =>
     await ProfilePage.logout.click();
 });
 
-Then(/^I should get redirected to the login page to enter my credentials again$/, async () => {
+Then(/^I should get redirected to the login page$/, async () => {
     chaiExpect(await LoginPage.userName).to.exist;
     chaiExpect(await LoginPage.password).to.exist;
     chaiExpect(await LoginPage.login).to.exist;
-    chaiExpect(await browser.getUrl()).to.equal("https://demoqa.com/login")
 });
 
-Then(/^I should be able to see the following book: Understanding ECMAScript 6$/, async () => { // NO FUNCIONA .-.
-    chaiExpect(await ProfilePage.understandingECMABook).to.exist;
+Then(/^I should see the following book: (.*)$/, async (book) => {
+    chaiExpect(await BookStorePage.learningJSBook).to.exist;
+    chaiExpect(await BookStorePage.learningJSBook.getText()).to.be.equal(book);
+    await BookStorePage.logout.click();
 });

@@ -23,6 +23,10 @@ class BookStorePage {
         return $('#searchBox');
     }
 
+    get logout() {
+        return $('/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[1]/div[2]/button');
+    }
+
     get goBack() {
         return $('/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[2]/div[9]/div[1]/button');
     }

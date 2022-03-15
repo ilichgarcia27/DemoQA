@@ -36,7 +36,7 @@ class ProfilePage {
     }
     
     get deleteAccount() {
-        return $('/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[3]/div[2]/button');
+        return $('.text-center button');
     }
 
     get deleteAllBooks() {
@@ -44,7 +44,7 @@ class ProfilePage {
     }
 
     get bookStore() {
-        return $('/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[6]/div/ul/li[2]/span');
+        return $('#gotoStore');
     }
 
     get loggedUser() {
