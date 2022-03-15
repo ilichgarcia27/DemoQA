@@ -62,7 +62,12 @@ exports.config = {
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+    },
+    // {
+    //     maxInstances: 5,
+    //     browserName: 'firefox',
+    // }
+    ],
     //
     // ===================
     // Test Configurations
@@ -94,7 +99,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://demoqa.com/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -141,7 +146,7 @@ exports.config = {
         // <string[]> (file/dir) require files before executing features
         require: ['./features/step-definitions/steps.js'],
         // <boolean> show full backtrace for errors
-        backtrace: false,
+        backtrace: true,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         requireModule: [],
         // <boolean> invoke formatters without executing steps

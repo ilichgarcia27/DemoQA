@@ -3,3 +3,6 @@
 3. Getting the right selectors.
 4. Understanding WebdriverIO errors.
 5. Implementing 'should' assertion when using Cucumber.
+6. Using CucumberJS instead of CucumberStudio.
+7. Run test cases on Firefox and Safari.
+8. Dealing with await instructions.
