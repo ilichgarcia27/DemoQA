@@ -4,10 +4,10 @@ This "Demo QA" is a WebdriverIO automation project based on CucumberJS and Chai,
 
 ## Technologies ⚙
 
-- WebdriverIO
-- CucumberJS
-- Chai
-- Selenium Standalone
+- WebdriverIO.
+- CucumberJS.
+- Chai.
+- Selenium Standalone.
 
 ## Getting Started 🏁
 
