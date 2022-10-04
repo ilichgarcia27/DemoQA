@@ -9,7 +9,7 @@ Feature: Demo QA Book Store
 
    Examples:
      | username           | password    | book1                               | book2                      |
-     | Kiarra.Satterfield | Testing123! | Programming JavaScript Applications | Understanding ECMAScript 6 |
+     | Anibal.Schmitt79   | Testing123! | Programming JavaScript Applications | Understanding ECMAScript 6 |
 
   Scenario Outline: As an existing user with correct credentials, I can look for books/authors in the book store
 
